@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hawk.admin.persistence.dao.SysRoleMenuMapper">
+
+    <!--自定义sql-->
+    <delete id="deleteByRoleId"
+            parameterType="java.lang.Long">
+     DELETE FROM sys_role_menu WHERE role_id = #{roleId,jdbcType=BIGINT}
+    </delete>
+
+    <delete id="deleteBatchByRoleIds"
+            parameterType="list">
+        DELETE FROM sys_role_menu
+        WHERE role_id IN (
+        <foreach collection="list" item="item" separator=",">
+            #{item,jdbcType=BIGINT}
+        </foreach>
+        )
+    </delete>
+    
+
+</mapper>
