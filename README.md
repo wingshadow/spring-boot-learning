@@ -1,2 +1,9 @@
 # spring-boot-learning
-修改mybatis中服务基类
+### BaseService
+该接口整合比较常用的方法
+
+### BaseServiceImpl
+该实现类引用BaseService接口，同时继承AbstractBaseServiceImpl实现获取主键
+
+### BaseMapper
+所有数据库操作的基类，继承tk.mybatis的Mapper、MySqlMapper实现常用方法的实现。
