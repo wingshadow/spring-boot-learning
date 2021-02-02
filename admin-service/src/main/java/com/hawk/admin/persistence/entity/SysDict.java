@@ -20,12 +20,7 @@ import java.util.Date;
 @ToString
 public class SysDict extends BasePO {
 
-    /**
-     * 编号
-     */
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long id;
-    
+
     /**
      * 数据值
      */

@@ -19,12 +19,7 @@ import java.util.List;
 @Setter
 public class SysDept extends BasePO {
 
-    /**
-     * 编号
-     */
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long id;
-    
+
     /**
      * 机构名称
      */

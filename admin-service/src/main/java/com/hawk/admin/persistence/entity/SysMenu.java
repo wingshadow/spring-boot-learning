@@ -21,13 +21,7 @@ import java.util.List;
 @JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 public class SysMenu extends BasePO {
 
-    /**
-     * ID
-     * 前端转换Long精度不够
-     * 先把主键转换为字符串类型
-     */
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long id;
+
     
     /**
      * 菜单名称

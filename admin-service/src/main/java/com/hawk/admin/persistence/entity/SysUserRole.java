@@ -18,11 +18,7 @@ import java.util.Date;
 @Setter
 public class SysUserRole extends BasePO {
 
-    /**
-     * 编号
-     */
-    private Long id;
-    
+
     /**
      * 用户ID
      */

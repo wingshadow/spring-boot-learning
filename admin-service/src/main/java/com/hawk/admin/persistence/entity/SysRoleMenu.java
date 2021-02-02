@@ -18,11 +18,7 @@ import java.util.Date;
 @Setter
 public class SysRoleMenu extends BasePO {
 
-    /**
-     * 编号
-     */
-    private Long id;
-    
+
     /**
      * 角色ID
      */

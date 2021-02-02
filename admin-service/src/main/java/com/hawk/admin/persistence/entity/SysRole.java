@@ -18,12 +18,7 @@ import java.util.Date;
 @Setter
 public class SysRole extends BasePO {
 
-    /**
-     * 编号
-     */
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long id;
-    
+
     /**
      * 角色名称
      */

@@ -33,6 +33,7 @@ public class MybatisConfig {
         sessionFactory.setTypeAliasesPackage("com.hawk.**.entity");
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        sessionFactory.getObject().getConfiguration().setMapUnderscoreToCamelCase(true);
         sessionFactory.setMapperLocations(resolveMapperLocations());
 
         return sessionFactory.getObject();
