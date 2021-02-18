@@ -1,0 +1,46 @@
+
+spring:
+  shardingsphere:
+    props:
+      sql:
+        show: true
+    masterslave:
+      load-balance-algorithm-type: round_robin
+      name: ms
+      master-data-source-name: master
+      slave-data-source-names: slave0
+    datasource:
+      names: master,slave0
+      master:
+        jdbc-url: jdbc:p6spy:mysql://127.0.0.1:3306/dld?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+        username: root
+        password: root123
+        driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+        type: com.zaxxer.hikari.HikariDataSource
+        max-idle: 10
+        max-wait: 10000
+        min-idle: 5
+        initial-size: 5
+      slave0:
+        jdbc-url: jdbc:p6spy:mysql://127.0.0.1:3306/dld?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+        username: root
+        password: root123
+        driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+        type: com.zaxxer.hikari.HikariDataSource
+        max-idle: 10
+        max-wait: 10000
+        min-idle: 5
+        initial-size: 5
+logging:
+  config:
+    classpath: logback-spring.xml
+  level:
+    root: info
+    com:
+      owl: debug
+
+owl:
+  seq:
+    snowflake:
+      datacenter: 1
+      machine: 1
