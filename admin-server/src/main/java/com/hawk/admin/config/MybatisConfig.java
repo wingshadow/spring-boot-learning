@@ -2,7 +2,7 @@ package com.hawk.admin.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.annotation.MapperScan;
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -22,6 +22,7 @@ import java.util.List;
  * @Date 2020/3/27 6:38
  */
 @Configuration
+@MapperScan({"com.hawk.admin.persistence.dao"})
 public class MybatisConfig {
     @Resource
     private DataSource dataSource;

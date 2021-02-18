@@ -19,16 +19,24 @@
         </dependency>
 
         <dependency>
+            <groupId>com.hawk</groupId>
+            <artifactId>mybatis-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
             <version>3.8.7</version>
         </dependency>
+
         <dependency>
             <groupId>com.hawk</groupId>
             <artifactId>admin-service</artifactId>
             <version>1.0.0</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
 </project>
